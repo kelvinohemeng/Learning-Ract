@@ -1,0 +1,150 @@
+:root {
+    -----purple-color: #6A47B7;
+    -----dark-color: #1A1B21;
+    -----darker-color: #161619;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+a {
+    /* text-decoration: none; */
+    font-size: 0.625rem;
+}
+
+body {
+    background-color: #383838;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----------------*/
+
+.the-card {
+    position: relative;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    background-color: var(-----dark-color);
+    max-width: 318px;
+    height: 780px;
+    height: 100%;
+
+    border-radius: 15px 15px 0 0;
+}
+
+/*---------------------*/
+.top-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    gap: 9px;
+}
+
+.the-image {
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.green-blur {
+    position: absolute;
+    top: 0;
+}
+
+.name-others {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.name-others,
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.name-others,
+span {
+    color: var(-----purple-color);
+    font-size: 14px;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.links-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 100px;
+    background-color: var(-----purple-color);
+    border: solid 1px white;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/*---------------------------*/
+.body-container {
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.body-container p {
+    font-size: 10px;
+    line-height: 150%;
+    font-weight: 100;
+}
+
+.body-container h3 {
+    font-weight: 400;
+    padding-block: 5px;
+    font-size: 16px;
+}
+
+
+/*-------------------*/
+.footer-container {
+    position: relative;
+    z-index: 999999;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(-----darker-color);
+    padding: 20px 40px;
+}
+
+.footer-container>img {
+    width: 30px;
+}
+
+.back-drop {
+    transform: rotate(180deg);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0.5;
+}

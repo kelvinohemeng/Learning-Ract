@@ -1,0 +1,139 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body{
+  background-color: #1C1C1C;
+  height: 100vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+p{
+  font-size: 10.24px;
+}
+a{
+  color: #918E9B;
+  font-size: 10.24px;
+}
+
+.App{
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  min-width: 550px;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F7FB;
+}
+.App > svg{
+  pointer-events: none;
+  z-index: 1;
+}
+.App > .up{
+  transform: translateX(40%) translateY(-70%);
+}
+.App > .down{
+  transform: translateX(-60%) translateY(50%);
+}
+.the-app{
+  max-width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 100;
+}
+.welcome-screen{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #293264;
+  gap: 20px;
+  overflow: hidden;
+  /* background-color: #D6DBF5; */
+}
+.welcome-screen > button{
+  padding: 16px 55px;
+  border-radius: 15px;
+  border: none;
+  background-color: #4D5B9E;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.welcome-screen > div > p{
+  padding-top: 5px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.up{
+  position: absolute;
+  max-width: 100%;
+  top: 0;
+  right: 0;
+  transform: translateX(50%) translateY(-50%) rotate(-35deg);
+  z-index: 100;
+}
+.down{
+  position: absolute;
+  max-width: 100%;
+  top: 0;
+  right: 0;
+  transform: translateX(-50%) translateY(50%) rotate(35deg);
+  z-index: 100;
+}
+.question{
+  min-width: 400px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.question-container > h2{
+  font-size: 16px;
+}
+.answers-container{
+  display: flex;
+  gap: 10px;
+}
+
+.answers-container > button{
+  cursor: pointer;
+  max-width: 100px;
+  padding: 5px 15px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+.check-container{
+  display: flex;
+}
+.check{
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #4D5B9E;
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
