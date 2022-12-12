@@ -111,7 +111,18 @@ a{
   gap: 10px;
 }
 
-.answers-container > button{
+.answers-btn{
+  cursor: pointer;
+  max-width: 100px;
+  padding: 5px 15px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  background-color: transparent;
+  background-color: #D6DBF5;
+  border: 1px solid black;
+}
+.answers-btn-default{
   cursor: pointer;
   max-width: 100px;
   padding: 5px 15px;

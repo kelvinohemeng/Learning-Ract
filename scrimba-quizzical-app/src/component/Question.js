@@ -1,28 +1,24 @@
 import React, { useState } from "react";
+import Answers from "./Answers";
 
 export default function Question(props) {
   const rightOption = props.answer;
   const wrongOptions = props.wrongAnswers;
-  const [innerState, setInnerState] = useState(true);
 
-  const chooseAns = () => {
-    setInnerState(prevInner => !prevInner);
-  };
+  const [activeAnswer, setActiveAnswer] = useState(false)
 
+  function handleClick() {
+      setActiveAnswer(!activeAnswer)
+  }
   const generateWrongAnswers = wrongOptions.map((wrong, index) => {
-
     return (
-      <button
-        key={index}
-        style={{
-          background: !innerState ? "#D6DBF5" : "transparent",
-        }}
-        onClick={chooseAns}
-      >
-        {wrong}
-      </button>
+      <Answers
+        key = {index}
+        value = {wrong}
+      />
     );
   });
+
 
   return (
     <div className="question">
@@ -30,7 +26,14 @@ export default function Question(props) {
         <h2>{props.question}</h2>
       </div>
       <div className="answers-container">
+        <button 
+            onClick={handleClick}
+            className={!activeAnswer ? 'answers-btn-default' : 'answers-btn'}
+        >
+            {rightOption}
+        </button>
         {generateWrongAnswers}
+
       </div>
       <hr></hr>
     </div>
