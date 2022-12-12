@@ -27,18 +27,12 @@ export default function App() {
             question={question.question}
             answer = {question.correct_answer}
             wrongAnswers = {question.incorrect_answers}
-            holdAns = {holdAnswer}
             hasChoosen = {question.state}
         />
         )
       })
-    
-      function holdAnswer(){
-        setQuestionData(prevQuestions => prevQuestions.map(questions => {
-          return  {...questions, state: !questions.state}
-        }))
-      }
 
+      
     function reverseGameState(){
       setGameState(false)
     }
