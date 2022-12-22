@@ -11,7 +11,7 @@ export default function App() {
   const [checkAnswer, setCheckAnswer] = React.useState(false)
 
   React.useEffect(()=>{
-    fetch('https://opentdb.com/api.php?amount=5&category=28&difficulty=easy&type=multiple')
+    fetch('https://opentdb.com/api.php?amount=5&category=15&difficulty=easy&type=multiple')
       .then(response => response.json())
       .then(data => setQuestionData(data.results))
     }, [])
