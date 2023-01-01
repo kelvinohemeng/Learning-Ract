@@ -1,3 +1,4 @@
+import { decode } from "html-entities"
 import React, { useState, useEffect } from 'react';
 import Answers from './Answers';
 
@@ -17,10 +18,10 @@ export default function Question(props) {
     return (
       <Answers
         key={index}
-        value={answer}
+        value={decode(answer)}
         selectedAnswer={selectedAnswer}
         setSelectedAnswer={setSelectedAnswer}
-        rightOption={props.answer}
+        rightOption={rightOption}
         checkAnswer = {props.checkAnswer}
       />
     );
@@ -31,7 +32,7 @@ export default function Question(props) {
   return (
     <div className="question">
       <div className="question-container">
-        <h2>{props.question}</h2>
+        <h2>{decode(props.question)}</h2>
       </div>
       <div className="answers-container">
         {generateAllAnswers}

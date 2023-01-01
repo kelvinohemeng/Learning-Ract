@@ -5,6 +5,7 @@ import { nanoid } from 'nanoid'
 import './App.css';
 
 export default function App() {
+  // const [haveSelectedAll, setHaveSelectedAll] = React.useState(false)
   const [questionsData, setQuestionData] = React.useState([])
   // const [questions, setQuestions] = React.useState(newQuestionData())
   const [gameState, setGameState] = React.useState(false)
@@ -13,11 +14,13 @@ export default function App() {
   React.useEffect(()=>{
     fetch('https://opentdb.com/api.php?amount=5&category=15&difficulty=easy&type=multiple')
       .then(response => response.json())
-      .then(data => setQuestionData(data.results))
+      .then((data) => {
+        setQuestionData(data.results)
+      })
+
+
     }, [])
     
-    
-
     
     const theQuestion = questionsData.map((question) => {
       question.id = nanoid()
@@ -33,6 +36,8 @@ export default function App() {
         />
         )
       })
+
+    
 
       
     function reverseGameState(){
@@ -64,6 +69,9 @@ export default function App() {
                 >
                 Check answers
             </button>
+        </div>
+        <div>
+          <p>Please refresh the Browser to start all over</p>
         </div>
     </div>
   );

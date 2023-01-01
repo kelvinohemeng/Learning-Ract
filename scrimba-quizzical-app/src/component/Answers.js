@@ -13,9 +13,8 @@ export default function Answers(props) {
       className={selectedAnswer === value ? 'answers-btn' : 'answers-btn-default'}
       style={{
         backgroundColor:
-            checkAnswer && value === props.rightOption ? '#94D7A2' : '',
-        color:
-            checkAnswer && value === props.rightOption ? "#000000" : '',
+            checkAnswer && value === props.rightOption ? '#94D7A2' : '' &&
+            checkAnswer && value !== props.rightOption ? '#ff0000'  : ''
       }}
     >
       {value}
